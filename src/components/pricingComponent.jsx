@@ -41,7 +41,7 @@ const PricingComponent = () => {
         </span>
       </div>
 
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden">
         
           <div className={`grid grid-cols-1 grid-rows-3 lg:grid-cols-3 lg:grid-rows-1 gap-5 lg:gap-8 transform duration-300 ease-in-out ${isYear ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
             {/* ---------section-left------- */}

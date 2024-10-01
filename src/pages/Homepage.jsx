@@ -4,10 +4,10 @@ import arrow_white from '../../public/right-arrow-2.png'
 import pic_home1 from '../../public/view/home-pic/nature-7189418_1280.jpg'
 import pic_home2 from '../../public/view/home-pic/camera-1130731_1280.jpg'
 import pic_home3 from '../../public/view/home-pic/nature-8064890_1280.webp'
-import { imgData } from '../data'
-import { feature } from '../data'
+import { ImgData, Feature } from '../data'
 import { ContentColorBar, HomepageColorBar } from '../components/ItemElement'
 import ScrollAnimation from '../components/ScrollAnimation'
+import HoverIcon from "../components/HoverIcon";
 
 const Homepage = () => {
 
@@ -68,7 +68,7 @@ const handleMouseLeave = () => {
     
     {/* --------------------------section2-------------------------- */}
     <div className='grid grid-col grid-rows-4 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-1 h-[2000px] md:h-[1000px] lg:h-[500px]'>
-        {imgData.slice(0,4).map((item) => (
+        {ImgData.slice(0,4).map((item) => (
             <div key={item.id} className='relative hover:-translate-y-6 hover:ease-in-out duration-500' onMouseEnter={() => handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>
                 <img src={item.img} className='w-full h-full object-cover '/>
                 <div className='absolute -bottom-0 px-10 w-full text-white h-30 bg-gradient-to-t from-black/75 to-transparent'>
@@ -84,9 +84,11 @@ const handleMouseLeave = () => {
 
     {/* --------------------------section3-------------------------- */}    
     <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 p-10 lg:h-[450px]'>
-        {feature.slice(0,3).map((item) => (
+        {Feature.slice(0,3).map((item) => (
             <div key={item.id} className='grid grid-rows-[35%_30%_35%] h-80'>
-                <img src={item.img} className='justify-self-center self-end'/>
+                <HoverIcon className='justify-self-center self-end'>
+                <img src={item.img}/>
+                </HoverIcon>
                 <h1 className="font-semibold text-xl tracking-wide justify-self-center self-center">{item.title}</h1>
                 <p className='text-gray-500 justify-self-center text-center font-light w-[80%] md:w-[55%] lg:w-full'>{item.des}</p>
             </div>

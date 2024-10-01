@@ -1,4 +1,4 @@
-import { feature } from "../data";
+import { Feature } from "../data";
 import { OthePageColorBar } from "../components/ItemElement";
 import friend from "../../public/view/home-pic/friends-4821707_1280.jpg";
 import arrow_white from "../../public/right-arrow-2.png";
@@ -30,7 +30,7 @@ const Features = () => {
 
       {/* --------------------------section2-------------------------- */}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 p-10 lg:h-[850px]'>
-        {feature.map((item) => (
+        {Feature.map((item) => (
             <div key={item.id} className='grid grid-rows-[35%_30%_35%] h-80'>
                 <HoverIcon className='justify-self-center self-end'>
                 <img src={item.img}/>

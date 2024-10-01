@@ -1,5 +1,5 @@
 import React from "react";
-import { table } from "../data";
+import { Table } from "../data";
 
 const TableComponent = () => {
   return (
@@ -25,7 +25,7 @@ const TableComponent = () => {
         </thead>
 
         <tbody className="divide-y sm:table-row-group block">
-          {table.map((item) => (
+          {Table.map((item) => (
             <tr key={item.id} className="sm:table-row block py-5">
               <td className="pb-3 sm:p-6 whitespace-nowrap text-sm font-medium tracking-widest sm:tracking-wider sm:table-cell block">
                 {item.title}

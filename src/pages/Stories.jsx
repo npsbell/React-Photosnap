@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import moon from '../../public/view/home-pic/clouds-323426_1280.jpg'
 import arrow_white from '../../public/right-arrow-2.png'
-import { imgData } from '../data'
+import { ImgData } from '../data'
 import { ContentColorBar } from '../components/ItemElement'
 import ScrollAnimation from "../components/ScrollAnimation";
 
@@ -34,7 +34,7 @@ const handleMouseLeave = () => {
 
     {/* --------------------------section2-------------------------- */}
     <div className='grid grid-col grid-rows-16 md:grid-cols-2 md:grid-rows-8 lg:grid-cols-4 lg:grid-rows-4 h-[8000px] md:h-[4000px] lg:h-[2000px]'>
-        {imgData.map((item) => (
+        {ImgData.map((item) => (
             <div key={item.id} className='relative hover:-translate-y-6 hover:ease-in-out duration-500' onMouseEnter={() => handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>
                 <img src={item.img} className='w-full h-full object-cover'/>
                 <div className='absolute -bottom-0 px-10 w-full text-white h-30 bg-gradient-to-t from-black/75 to-transparent'>

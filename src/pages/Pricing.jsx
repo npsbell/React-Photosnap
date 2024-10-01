@@ -1,5 +1,5 @@
 import React from "react";
-import { OthePageColorBar } from "../components/ItemElement";
+import { OtherPageColorBar } from "../components/ItemElement";
 import arrow_white from "../../public/right-arrow-2.png";
 import PreFooter from "../components/PreFooter";
 import camera from "../../public/view/home-pic/camera-5113699_1280.jpg";
@@ -13,7 +13,7 @@ const Pricing = () => {
       <div className="pt-20 h-[700px] md:h-[690px]" >
         <div className='1 grid grid-col grid-rows-[40%_60%] md:grid-cols-[40%_60%] md:grid-rows-1 bg-black text-white h-full'>
             <div className='left flex relative justify-center h-full md:h-3/5 self-center order-2 md:order-1'>
-                <OthePageColorBar />
+                <OtherPageColorBar />
                 <div className='flex flex-col justify-center mx-10'>
                   <ScrollAnimation>
                   <h1 className='font-semibold text-4xl md:text-3xl lg:text-4xl tracking-widest'>PRICING</h1>
